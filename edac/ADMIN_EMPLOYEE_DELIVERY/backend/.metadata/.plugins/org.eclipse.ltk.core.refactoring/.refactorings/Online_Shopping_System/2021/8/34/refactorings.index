@@ -1,0 +1,14 @@
+1629020219744	Delete element
+1629020235296	Rename package 'com.onlineshopping.entity'
+1629021961891	Delete element
+1629025234860	Rename type 'OrderDetails'
+1629026239945	Delete elements
+1629035464316	Rename type 'Responce'
+1629453542891	Rename type 'ProductDetails'
+1629485071949	Rename type 'Laptop'
+1629485081982	Rename type 'Mobile'
+1629485102780	Rename type 'Tv'
+1629486370544	Rename compilation unit 'ADlaptopDto.java'
+1629494015263	Delete element
+1629536645240	Rename type 'LaptopController'
+1629559865693	Rename type 'OrdersDto'
