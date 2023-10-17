@@ -1,0 +1,25 @@
+package com.onlineshopping.models;
+
+import org.springframework.beans.BeanUtils;
+
+import com.onlineshopping.entities.*;
+
+public class AdlaptopDto {
+
+	private String laptopName;
+	private String brand;
+	private int countInStock;
+
+	private Double price;
+
+	public AdlaptopDto() {
+
+	}
+
+	public static AdlaptopDto fromEntity(Laptops entity) {
+		AdlaptopDto dto = new AdlaptopDto();
+		BeanUtils.copyProperties(entity, dto);
+		return dto;
+
+	}
+}

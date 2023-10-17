@@ -1,0 +1,27 @@
+package com.onlineshopping.models;
+
+import org.springframework.beans.BeanUtils;
+
+import com.onlineshopping.entities.*;
+
+public class AdtvDto {
+
+	private String tvName;
+
+	private Double price;
+	private String brand;
+	private int countInStock;
+
+	public AdtvDto() {
+
+	}
+
+
+
+	public static AdtvDto fromEntity(Tvs entity) {
+		AdtvDto dto = new AdtvDto();
+		BeanUtils.copyProperties(entity, dto);
+		return dto;
+
+	}
+}

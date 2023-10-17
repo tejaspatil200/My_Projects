@@ -1,0 +1,33 @@
+.image{
+   height: 250px;
+   width: 300px; 
+}
+.admin{
+height: 300px;
+width: 300px;
+margin-left: 50px !important;
+
+
+}
+.ad{
+   height: 150px;
+width: 150px
+
+   
+}
+.empimage{
+  
+   height: 400px;
+   width: 350px; 
+
+
+}
+.emplogo{
+   height: 70px;
+   width: 370px
+
+}
+.emplogin{
+   margin-top: 10px!;
+   margin-left: 50px !important;
+}

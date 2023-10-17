@@ -1,0 +1,115 @@
+create table admin(adminId INT primary key AUTO_INCREMENT, adminName varchar(100),
+email varchar(100),
+password varchar(200),
+created_on timestamp DEFAULT CURRENT_TIMESTAMP);
+
+
+
+
+create table employee 
+(employeeId INT AUTO_INCREMENT ,
+employeeName varchar(100),
+employeeMobile Varchar(20),
+employeeGender Varchar(20),
+employeeEmail varchar(100),
+employeePassword varchar(200),
+employeeDob Date ,
+employeeJoindate Date ,
+created_on timestamp DEFAULT CURRENT_TIMESTAMP,
+Primary key(employeeId));
+
+create table delivery
+(deliveryBoyId INT AUTO_INCREMENT ,
+deliveryBoyName varchar(100),
+deliveryBoymobile Varchar(20),
+deliveryBoyGender Varchar(20),
+deliveryBoyEmail varchar(100),
+deliveryBoyPassword varchar(200),
+vehicleType varchar(100),
+vehicleNo varchar(100),
+dob Date ,
+joiningDate Date, 
+created_on timestamp DEFAULT CURRENT_TIMESTAMP,
+Primary key(deliveryBoyId));
+
+
+
+create table customer
+(customerId int AUTO_INCREMENT,
+customerName varchar(100),
+customerMobile Varchar(20),
+customerGender Varchar(20),
+customerEmail varchar(100),
+customerPassword varchar(200),
+customerAge INT,
+customerAddress varchar(500),
+customerCity varchar(200),
+customerPincode varchar(200),
+customerCountry varchar(200),
+customerDob Date ,
+customerJoinDate timestamp DEFAULT CURRENT_TIMESTAMP,
+Primary key(customerId));
+
+
+
+create table orders
+(orderId INT AUTO_INCREMENT primary key,
+customerId int,
+orderDate timestamp DEFAULT CURRENT_TIMESTAMP,
+deliveryDate date,
+deliveryBoyId int ,
+orderAmount double,
+transactionId varchar(100),
+paymentStatus varchar(20),
+deliveryStatus varchar(20),
+FOREIGN key(customerId) references customer(customerId),
+FOREIGN key(deliveryBoyId)  references delivery(deliveryBoyId)
+);
+
+
+create table itemDetail(
+itemId INT primary key AUTO_INCREMENT,
+itemName varchar(100),
+price double,
+quantity integer,
+orderId int,
+FOREIGN key(orderId) references orders(orderId)
+);
+
+
+
+
+create table earphone (productId int  DEFAULT "102", earphoneId integer primary key auto_increment, 
+earphoneName varchar(100),price varchar(100), brand varchar(100), connectivity varchar(50),batteryLife varchar(50) ,
+mic varchar(50),charging varchar(50),thumbnail varchar(100), description varchar(5000), countInStock  integer);
+
+create table laptop
+ (productId int  DEFAULT "103", laptopId integer primary key auto_increment,laptopName varchar(100),
+ RAM varchar(100), brand varchar(100), operatingSystem VARCHAR(100), 
+processor varchar(100), ScreenSize varchar(100), price varchar(100), 
+thumbnail varchar(100), description varchar(5000), countInStock integer);
+
+create table mobile (productId int  DEFAULT "101", mobileId integer primary key auto_increment,
+mobileName varchar(100), RAM varchar(100), brand varchar(100),
+battery varchar(100), primaryCamera varchar(100), screenResolution varchar(100), 
+price double, thumbnail varchar(100), description varchar(5000), countInStock integer);
+
+create table tv (productId int DEFAULT "104", tvId integer primary key auto_increment, 
+tvName varchar(100), price varchar(100), brand varchar(100), 
+screenSize varchar(100), resolution varchar(100), operatingSystem varchar(100),
+ screenType varchar(100), thumbnail varchar(100), description varchar(5000), countInStock integer);
+
+
+
+
+alter table mobile AUTO_INCREMENT=1001;
+
+alter table earphone AUTO_INCREMENT=2001;
+
+alter table laptop AUTO_INCREMENT=3001;
+
+
+alter table tv AUTO_INCREMENT=4001;
+
+
+

@@ -1,0 +1,11 @@
+        	customer					Admin					
+
+1.	register and login			1.	Login
+
+2.	buy eggs				2.	Add eggs quantity	
+
+3.	payment					3.	
+
+
+
+4.      see orders

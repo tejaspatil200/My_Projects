@@ -1,0 +1,168 @@
+package com.onlineshopping.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="laptop")
+public class Laptop {
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	private int laptopId;
+	private String laptopName;
+	private String ram;
+	private String brand;
+	private String operatingSystem;
+	private String processor;
+	private String screenSize;
+	private float price;
+	private String thumbnail;
+	private String description;
+	private int countInStock;
+	
+	
+	public Laptop() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public Laptop(int laptopId, String laptopName, String ram, String brand, String operatingSystem, String processor,
+			String screenSize, float price, String thumbnail, String description, int countInStock) {
+		super();
+		this.laptopId = laptopId;
+		this.laptopName = laptopName;
+		this.ram = ram;
+		this.brand = brand;
+		this.operatingSystem = operatingSystem;
+		this.processor = processor;
+		this.screenSize = screenSize;
+		this.price = price;
+		this.thumbnail = thumbnail;
+		this.description = description;
+		this.countInStock = countInStock;
+	}
+
+
+	public int getLaptopId() {
+		return laptopId;
+	}
+
+
+	public void setLaptopId(int laptopId) {
+		this.laptopId = laptopId;
+	}
+
+
+	public String getLaptopName() {
+		return laptopName;
+	}
+
+
+	public void setLaptopName(String laptopName) {
+		this.laptopName = laptopName;
+	}
+
+
+	public String getRam() {
+		return ram;
+	}
+
+
+	public void setRam(String ram) {
+		this.ram = ram;
+	}
+
+
+	public String getBrand() {
+		return brand;
+	}
+
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+
+
+	public String getOperatingSystem() {
+		return operatingSystem;
+	}
+
+
+	public void setOperatingSystem(String operatingSystem) {
+		this.operatingSystem = operatingSystem;
+	}
+
+
+	public String getProcessor() {
+		return processor;
+	}
+
+
+	public void setProcessor(String processor) {
+		this.processor = processor;
+	}
+
+
+	public String getScreenSize() {
+		return screenSize;
+	}
+
+
+	public void setScreenSize(String screenSize) {
+		this.screenSize = screenSize;
+	}
+
+
+	public float getPrice() {
+		return price;
+	}
+
+
+	public void setPrice(float price) {
+		this.price = price;
+	}
+
+
+	public String getThumbnail() {
+		return thumbnail;
+	}
+
+
+	public void setThumbnail(String thumbnail) {
+		this.thumbnail = thumbnail;
+	}
+
+
+	public String getDescription() {
+		return description;
+	}
+
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+
+	public int getCountInStock() {
+		return countInStock;
+	}
+
+
+	public void setCountInStock(int countInStock) {
+		this.countInStock = countInStock;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Laptop [laptopId=" + laptopId + ", laptopName=" + laptopName + ", ram=" + ram + ", brand=" + brand
+				+ ", operatingSystem=" + operatingSystem + ", processor=" + processor + ", screenSize=" + screenSize
+				+ ", price=" + price + ", thumbnail=" + thumbnail + ", description=" + description + ", countInStock="
+				+ countInStock + "]";
+	}
+	
+	
+}
